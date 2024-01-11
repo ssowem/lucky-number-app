@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+body {
+  font-family: 'Noto Serif KR', serif;
+  text-align: center;
+  background-color: #4FF6B0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+button {
+  font-family: 'Noto Serif KR', serif;
+  margin-top: 30px;
+  border: none;
+  border-radius: 25px;
+  background-color: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
