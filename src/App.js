@@ -16,7 +16,7 @@ function App() {
         <MyComponent
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
-
+        
         />
       
         

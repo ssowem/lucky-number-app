@@ -3,10 +3,38 @@ import "./Contents.css"
 
 // props가 C 일때
 const NumberCount = (props) => {
-  const {  minValue, setMinValue, maxValue, setMaxValue } = props;
+  const {  minValue, maxValue, CountMaxValue ,setCountMaxValue } = props;
   const totalCount = maxValue - minValue + 1;
-  console.log("범위를 더한 값",totalCount);
 
+  const handleMaxValueChange = (e) => {
+    const newValue = Math.max(1, Math.min(7, Number(e.target.value)));
+    setCountMaxValue(newValue);
+  }
+
+  const handleIncrement = () => {
+    setCountMaxValue(prevsetCountMaxValue => Math.min(7, prevsetCountMaxValue + 1));
+  }
+
+  const handleDecrement = () => {
+    setCountMaxValue(prevsetCountMaxValue => Math.max(1, prevsetCountMaxValue - 1));
+  }
+
+  const handleNextClick = () => {
+    if(CountMaxValue > totalCount ){
+      console.log("최소값+최대값 총갯수:",totalCount)
+      alert("선택범위를 벗어난 숫자를 입력하셨습니다")
+      return;
+    }
+    props.setCurrentPage('F');
+  }
+
+  const handleAddColumnsClick = () => {
+    if(CountMaxValue > totalCount ){
+      alert("선택범위를 벗어난 숫자를 입력하셨습니다")
+      return;
+    }
+    props.setCurrentPage('D');
+  }
   return (
 
     <div>
@@ -14,18 +42,26 @@ const NumberCount = (props) => {
       <p>숫자 갯수, 줄 추가는 최대 7개까지만 가능합니다.</p>
 
       <div>
-        <input type="number" />
+        <input type="number"
+          value={CountMaxValue}
+          onChange={handleMaxValueChange}
+        />
+
+{CountMaxValue && <p>{`${CountMaxValue}개의 숫자조합이 이루어집니다..`}</p>}
+
+    <div>
+    <button onClick={handleIncrement}>더하기</button>
+    <button onClick={handleDecrement}>빼기</button>
+    </div>
       </div>
-      <p className="hidden">n개의 숫자조합이 이루어집니다.</p>
-      <div>
-        <button>더하기</button>
-        <button>빼기</button>
-      </div>
-      <button onClick={() => props.setCurrentPage('D')}>이대로 줄 추가</button>
+      
+
+
+      <button onClick={handleAddColumnsClick}>이대로 줄 추가</button>
 
       <div>
         <button onClick={() => props.setCurrentPage('B')}>이전으로</button>
-        <button onClick={() => props.setCurrentPage('F')}>다음으로</button>
+        <button onClick={handleNextClick}>다음으로</button>
       </div>
     </div>
   );

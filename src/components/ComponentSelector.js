@@ -1,8 +1,10 @@
-import Contents from "../Contents.js0110";
 
 
+// props가 contentprops일떄
 function ComponentSelector() {
   return (
-    <Contents />
+    <div>
+    여기는 컴포넌트셀렉터
+  </div>
   )
 }
