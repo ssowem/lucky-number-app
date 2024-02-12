@@ -8,18 +8,18 @@ const EnterWish = (props) => {
     setInputValue(e.target.value);
   }
 
-  const handleSubmit = (event) => {
-    // const isSpaceIncluded = event.target.value;
+  const handleSubmit = () => {
     if(inputValue.trim() === ''){
       alert("소원을 꼭 입력해주셔야 합니다!")
       return;
-    }
+    } else
     props.setCurrentPage('G')
   }
   return (
-    <div>
+    <div className='inner'> 
       <p>마지막으로 소원을 입력해주세요!</p>
-      <input type="text"
+      <input className='wish'
+        type="text"
         value={inputValue}
         onChange={handleInputChange}
       />

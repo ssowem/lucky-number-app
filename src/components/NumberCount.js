@@ -3,7 +3,7 @@ import "./Contents.css"
 
 // props가 C 일때
 const NumberCount = (props) => {
-  const {  minValue, maxValue, CountMaxValue ,setCountMaxValue } = props;
+  const { minValue, maxValue, CountMaxValue, setCountMaxValue } = props;
   const totalCount = maxValue - minValue + 1;
 
   const handleMaxValueChange = (e) => {
@@ -20,8 +20,8 @@ const NumberCount = (props) => {
   }
 
   const handleNextClick = () => {
-    if(CountMaxValue > totalCount ){
-      console.log("최소값+최대값 총갯수:",totalCount)
+    if (CountMaxValue > totalCount) {
+      console.log("최소값+최대값 총갯수:", totalCount)
       alert("선택범위를 벗어난 숫자를 입력하셨습니다")
       return;
     }
@@ -29,7 +29,7 @@ const NumberCount = (props) => {
   }
 
   const handleAddColumnsClick = () => {
-    if(CountMaxValue > totalCount ){
+    if (CountMaxValue > totalCount) {
       alert("선택범위를 벗어난 숫자를 입력하셨습니다")
       return;
     }
@@ -38,23 +38,23 @@ const NumberCount = (props) => {
   return (
 
     <div>
-      <p>몇개의 행운의 숫자를 얻고싶으세요?</p>
-      <p>숫자 갯수, 줄 추가는 최대 7개까지만 가능합니다.</p>
+      <p className='text-medium'>몇개의 행운의 숫자를 얻고싶으세요?</p>
+      <p className='text-small'>숫자 갯수, 줄 추가는 최대 7개까지만 가능합니다.</p>
 
-      <div>
+      <div className='inner'>
         <input type="number"
           value={CountMaxValue}
           onChange={handleMaxValueChange}
         />
 
-{CountMaxValue && <p>{`${CountMaxValue}개의 숫자조합이 이루어집니다..`}</p>}
+        {CountMaxValue && <p className='user-message'>{`${CountMaxValue}개의 랜덤 숫자를 얻게 됩니다..`}</p>}
 
-    <div>
-    <button onClick={handleIncrement}>더하기</button>
-    <button onClick={handleDecrement}>빼기</button>
-    </div>
+        <div>
+          <button onClick={handleIncrement}>더하기</button>
+          <button onClick={handleDecrement}>빼기</button>
+        </div>
       </div>
-      
+
 
 
       <button onClick={handleAddColumnsClick}>이대로 줄 추가</button>

@@ -14,7 +14,7 @@ function MyComponent({ currentPage, setCurrentPage }) {
   const [CountMaxValue, setCountMaxValue] = useState(1);
   const [AddColumnsMaxValue, setAddColumnsMaxValue] = useState(1);
 
-  const [inputValue, setInputValue] = useState();
+  const [inputValue, setInputValue] = useState("");
   
   const resetAllValues = () => {
     setMinValue(1);

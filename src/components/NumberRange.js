@@ -58,8 +58,8 @@ const NumberRange = (props) => {
 
   return (
     <div>
-      <p>조합하고 싶은 범위를 정해주세요.</p>
-      <p>최대 99까지의 숫자만 가능합니다</p>
+      <p className='text-medium'>조합하고 싶은 범위를 정해주세요.</p>
+      <p className='text-small'>💡최대 99까지의 숫자만 가능합니다.</p>
 
       <div>
         <div className="number-range-input">
@@ -81,7 +81,7 @@ const NumberRange = (props) => {
             onChange={handleValueChange("max")}
           />
         </div>
-        {maxValue && <p>{`${minValue}부터 ${maxValue}까지의 숫자를 정하셨습니다.`}</p>}
+        {maxValue && <p className='user-message'>{`${minValue}부터 ${maxValue}까지의 숫자를 정하셨습니다.`}</p>}
       </div>
 
       {/* <button className='start-btn' onClick={() => props.setCurrentPage('C')}>

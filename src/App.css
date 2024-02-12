@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Noto Serif KR', serif;
   text-align: center;
@@ -13,7 +19,7 @@ body {
 
 button {
   font-family: 'Noto Serif KR', serif;
-  margin-top: 30px;
+  margin-top: 40px;
   border: none;
   border-radius: 25px;
   background-color: #fff;
@@ -38,3 +44,37 @@ li {
 li:last-child {
   padding: 0;
 }
+
+.coin-image {
+  width: 500px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .intro-text {
+    font-size: 20px;
+  }
+
+  .Contents{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .start-btn {
+    font-size: 18px;
+  }
+
+  .coin-image {
+    width: 148px;
+    bottom: 20px;
+    right: 20px;
+  }
+} 
