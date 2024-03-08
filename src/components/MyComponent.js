@@ -29,7 +29,6 @@ function MyComponent({ currentPage, setCurrentPage }) {
 
   switch (currentPage) {
     case 'A':
-      // return <Intro setCurrentPage={setCurrentPage}/>;
       return <Main setCurrentPage={setCurrentPage}/>
     case 'B':
       return <NumberRange

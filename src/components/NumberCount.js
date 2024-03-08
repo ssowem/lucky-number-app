@@ -21,7 +21,6 @@ const NumberCount = (props) => {
 
   const handleNextClick = () => {
     if (CountMaxValue > totalCount) {
-      console.log("최소값+최대값 총갯수:", totalCount)
       alert("선택범위를 벗어난 숫자를 입력하셨습니다")
       return;
     }

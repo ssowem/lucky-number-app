@@ -6,25 +6,17 @@ const NumberRange = (props) => {
 
   const { minValue, setMinValue, maxValue, setMaxValue } = props;
  
-
-  // const handleValueChange = (event, type) => {
-  //   console.log(type);
-  //   console.log(event.target.value);
-  // }
-
   const handleValueChange = type => event => {
     // console.log("min이나max 중에",type);
     // console.log("입력된값",event.target.value);
 
     if("min" === type){
-      console.log("event : ", event.target.value)
       if(event.target.value === ""){
         setMinValue(event.target.value);
       } else {
         setMinValue(parseInt(event.target.value));
       } 
     } else {
-      console.log("event : ", event.target.value)
       if(event.target.value === ""){
         setMaxValue(event.target.value);
       } else {
@@ -33,10 +25,7 @@ const NumberRange = (props) => {
     }
   }
 
-  // console.log("min : " + minValue + ", max : " + maxValue);
-
   const handleNextClick = () => {
-    console.log("min : " + minValue + ", max : " + maxValue);
     if(minValue === ""){
       alert("최소값을 입력해주세요.")
       return;
@@ -68,7 +57,6 @@ const NumberRange = (props) => {
             value={minValue}
             min="1"
             max="99"
-            //onChange={(event) => handleValueChange(event,"min")}
             onChange={handleValueChange("min")}
 
           />
@@ -83,10 +71,6 @@ const NumberRange = (props) => {
         </div>
         {maxValue && <p className='user-message'>{`${minValue}부터 ${maxValue}까지의 숫자를 정하셨습니다.`}</p>}
       </div>
-
-      {/* <button className='start-btn' onClick={() => props.setCurrentPage('C')}>
-        다음으로
-      </button> */}
 
       <button className='start-btn' onClick={handleNextClick}>
         다음으로
