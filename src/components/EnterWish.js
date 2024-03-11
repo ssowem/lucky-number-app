@@ -16,8 +16,8 @@ const EnterWish = (props) => {
     props.setCurrentPage('G')
   }
   return (
-    <div className='inner'> 
-      <p>마지막으로 소원을 입력해주세요!</p>
+    <div> 
+      <p className='text-small'>마지막으로 소원을 입력해주세요!</p>
       <input className='wish'
         type="text"
         value={inputValue}

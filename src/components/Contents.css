@@ -78,11 +78,10 @@ input[readonly] {
 }
 
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 430px) {
   .Contents {
     width: 300px !important;
     margin: 0 auto;
-    background-color: antiquewhite;
   }
 
   .text-medium {

@@ -19,7 +19,7 @@ const AddColumns = (props) => {
   }
 
   return (
-    <div className='inner'>
+    <div>
       <button onClick={() => props.setCurrentPage('C')}>이대로 줄 추가 취소</button>
       <div>
         <input type="number"
@@ -40,7 +40,6 @@ const AddColumns = (props) => {
         </p>
       }
       <div>
-
         <button onClick={() => props.setCurrentPage('C')}>이전으로</button>
         <button onClick={() => props.setCurrentPage('F')}>다음으로</button>
       </div>
