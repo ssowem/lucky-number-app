@@ -4,9 +4,6 @@ import React, { useState, useEffect } from 'react';
 const Completion = (props) => {
   const { minValue, maxValue, CountMaxValue, inputValue, resetAllValues, AddColumnsMaxValue } = props;
   const [randomNumbers, setRandomNumbers] = useState([]);
-  console.log(inputValue);
-  console.log("최소값:", minValue, "최대값:", maxValue, "갯수:", CountMaxValue);
-
   const generateRandomNumbers = (min, max, count) => {
     const numbers = new Set();
     while (numbers.size < count) {
@@ -34,9 +31,6 @@ const Completion = (props) => {
     props.setCurrentPage('A');
     resetAllValues();
   };
-
-
-  console.log(AddColumnsMaxValue);
 
   return (
     <div className='inner'>
