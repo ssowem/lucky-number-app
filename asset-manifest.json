@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/lucky-number-app/static/css/main.8615800b.css",
-    "main.js": "/lucky-number-app/static/js/main.605159ef.js",
+    "main.css": "/lucky-number-app/static/css/main.8821744e.css",
+    "main.js": "/lucky-number-app/static/js/main.7c603e41.js",
     "static/js/787.a72c406f.chunk.js": "/lucky-number-app/static/js/787.a72c406f.chunk.js",
     "static/media/coin.png": "/lucky-number-app/static/media/coin.ab817e27642b1eceeb62.png",
     "index.html": "/lucky-number-app/index.html",
-    "main.8615800b.css.map": "/lucky-number-app/static/css/main.8615800b.css.map",
-    "main.605159ef.js.map": "/lucky-number-app/static/js/main.605159ef.js.map",
+    "main.8821744e.css.map": "/lucky-number-app/static/css/main.8821744e.css.map",
+    "main.7c603e41.js.map": "/lucky-number-app/static/js/main.7c603e41.js.map",
     "787.a72c406f.chunk.js.map": "/lucky-number-app/static/js/787.a72c406f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8615800b.css",
-    "static/js/main.605159ef.js"
+    "static/css/main.8821744e.css",
+    "static/js/main.7c603e41.js"
   ]
 }
