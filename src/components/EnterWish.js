@@ -29,8 +29,6 @@ const EnterWish = (props) => {
         <button onClick={handleSubmit}>완성하기</button>
       </div>
     </div>
-
-
   )
 }
 
