@@ -58,7 +58,6 @@ li:last-child {
   width: 500px;
 }
 
-
 .coin-image {
   width: 400px;
   position: absolute;
@@ -174,14 +173,27 @@ input[readonly] {
 
 
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 500px) {
+  
+  button {
+    font-size: 16px;
+  }
+.container {
+  width: 300px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
 
   h1 {
-    font-size: 35px;
+    font-size: 28px;
+  }
+
+  li {
+    font-size: 20px;
   }
 
   .intro-text {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .start-btn {
@@ -194,5 +206,27 @@ input[readonly] {
     right: 50%;
     transform: translate(-50%, -50%);
     opacity: .4;
+  }
+
+  .text-medium {
+    font-size: 17px;
+  }
+
+  .text-small {
+    font-size: 14px;
+  }
+
+  input[type="number"] {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .user-message {
+    font-size: 14px;
+  }
+
+  input[type="text"].wish {
+    font-size: 16px;
   }
 }

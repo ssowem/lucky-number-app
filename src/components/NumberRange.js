@@ -73,7 +73,7 @@ const NumberRange = (props) => {
         {maxValue && <p className='user-message'>{`${minValue}부터 ${maxValue}까지의 숫자를 정하셨습니다.`}</p>}
       </div>
 
-      <button className='start-btn' onClick={handleNextClick}>
+      <button className='next' onClick={handleNextClick}>
         다음으로
       </button>
     </div>
