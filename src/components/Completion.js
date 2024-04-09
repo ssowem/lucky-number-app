@@ -33,13 +33,11 @@ const Completion = (props) => {
   };
 
   return (
-    <div className='inner'>
-      <p>🙏🏻나의 소원</p>
+    <div className='contents-gap'>
+      <p className='text-medium'>🙏🏻나의 소원</p>
       <input className='wish' type="text" value={inputValue} readOnly />
       <div className='list-container'>{renderLists()}</div>
-
-
-      <button onClick={handleReset}>첫화면으로</button>
+        <button onClick={handleReset}>첫 화면으로</button>
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import "./Contents.css"
 
 // props가 C 일때
 const NumberCount = (props) => {
@@ -36,31 +35,34 @@ const NumberCount = (props) => {
   }
   return (
 
-    <div>
-      <p className='text-medium'>몇개의 행운의 숫자를 얻고싶으세요?</p>
-      <p className='text-small'>숫자 갯수, 줄 추가는 최대 7개까지만 가능합니다.</p>
-
-      <div className='inner'>
-        <input type="number"
-          value={CountMaxValue}
-          onChange={handleMaxValueChange}
-        />
-
-        {CountMaxValue && <p className='user-message'>{`${CountMaxValue}개의 랜덤 숫자를 얻게 됩니다..`}</p>}
-
-        <div>
-          <button onClick={handleIncrement}>더하기</button>
-          <button onClick={handleDecrement}>빼기</button>
-        </div>
+    <div className='contents-gap'>
+      <div>
+        <p className='text-medium'>몇개의 행운의 숫자를 얻고싶으세요?</p>
+        <p className='text-small'>숫자 갯수, 줄 추가는 최대 7개까지만 가능합니다.</p>
       </div>
 
-
+      <div className='input-gap'>
+        <div>
+          <input type="number"
+            value={CountMaxValue}
+            onChange={handleMaxValueChange}
+          />
+        </div>
+        {CountMaxValue && <p className='user-message'>{`${CountMaxValue}개의 랜덤 숫자를 얻게 됩니다..`}</p>}
+      </div>
+      <div className='btn-gap'>
+        <button onClick={handleIncrement}>더하기</button>
+        <button onClick={handleDecrement}>빼기</button>
+      </div>
 
       <button onClick={handleAddColumnsClick}>이대로 줄 추가</button>
 
-      <div>
+
+
+
+      <div className='btn-gap control'>
         <button onClick={() => props.setCurrentPage('B')}>이전으로</button>
-        <button onClick={handleNextClick}>다음으로</button>
+        <button className='next' onClick={handleNextClick}>다음으로</button>
       </div>
     </div>
   );

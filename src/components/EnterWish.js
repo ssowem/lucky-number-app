@@ -16,17 +16,17 @@ const EnterWish = (props) => {
     props.setCurrentPage('G')
   }
   return (
-    <div> 
-      <p className='text-small'>마지막으로 소원을 입력해주세요!</p>
+    <div className='contents-gap'> 
+      <p className='text-medium'>마지막으로 소원을 입력해주세요!</p>
       <input className='wish'
         type="text"
         value={inputValue}
         onChange={handleInputChange}
       />
         
-      <div>
+      <div className='btn-gap control'>
         <button onClick={() => props.setCurrentPage('D')}>이전으로</button>
-        <button onClick={handleSubmit}>완성하기</button>
+        <button className='next' onClick={handleSubmit}>완성하기</button>
       </div>
     </div>
   )

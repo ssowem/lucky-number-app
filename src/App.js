@@ -8,16 +8,11 @@ function App() {
   
   
   return (
-    <div className="Container">
-      <div className='Contents'>
+    <div className="container">
         <MyComponent
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
         />
-      
-        
-      
-      </div>
     </div>
   );
 }
