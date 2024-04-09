@@ -10,7 +10,7 @@ const Main = (props) => {
         소원을 빌고, <br />
         행운의 숫자를 조합해보세요 :) 
       </div>
-      <button className='next' onClick={() => props.setCurrentPage('B')}>
+      <button className='btn-mg' onClick={() => props.setCurrentPage('B')}>
             행운을 찾으러 GO
       </button>
       <img src={coin} className='coin-image' alt='coin'/>

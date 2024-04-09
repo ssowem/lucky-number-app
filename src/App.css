@@ -138,11 +138,11 @@ input[readonly] {
   background-color: #00b77a;
   color: #fff;
   text-align: center;
-  margin: 10px 0;
 }
 
 .text-medium {
   font-size: 28px;
+  font-weight: 600;
 }
 
 .text-small {
@@ -171,6 +171,9 @@ input[readonly] {
   gap: 10px;
 }
 
+.btn-mg {
+  margin-top: 14px;
+}
 
 
 @media screen and (max-width: 500px) {
@@ -179,7 +182,7 @@ input[readonly] {
     font-size: 16px;
   }
 .container {
-  width: 300px;
+  width: 314px;
   padding: 0 20px;
   margin: 0 auto;
 }
